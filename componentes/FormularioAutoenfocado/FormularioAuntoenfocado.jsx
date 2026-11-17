@@ -5,6 +5,7 @@ function FormularioAutoenfocado() {
   const [nombre, setNombre] = useState('')
 
 
+
   useEffect(() => {
     nombreInput.current.focus()
     if(nombreInput.current?.value .length > 10) {
@@ -12,7 +13,7 @@ function FormularioAutoenfocado() {
     } else {
       nombreInput?.current?.style.setProperty('color', 'black')
     }
-  }, [nombreInput, nombre])
+  }, [nombreInput, nombre,])
 
   return (
     <form>
