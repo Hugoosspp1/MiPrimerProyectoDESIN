@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Cronometro from './cronometro.jsx';
 import { TemaContext } from './TemaContext.jsx';
 import Semaforo from './componentes/semaforo/semaforo.jsx';
+import FormularioAutoenfocado from './componentes/FormularioAutoenfocado/FormularioAuntoenfocado.jsx';
 
 function App() {
   const [tema, setTema] = useState('claro');
@@ -14,6 +15,7 @@ function App() {
         </button>
         <Cronometro />
         <Semaforo />
+        <FormularioAutoenfocado />
       </main>
     </TemaContext.Provider>
   );
