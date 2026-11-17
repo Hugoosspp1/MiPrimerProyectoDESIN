@@ -13,8 +13,8 @@ function App() {
         <button onClick={() => setTema(tema === 'claro' ? 'oscuro' : 'claro')}>
           Cambiar tema
         </button>
-        {/* <Cronometro /> */}
-        {/* <Semaforo /> */}
+        <Cronometro /> 
+        <Semaforo /> 
         <FormularioAutoenfocado />
       </main>
     </TemaContext.Provider>

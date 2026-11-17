@@ -1,8 +1,10 @@
 import { useRef, useEffect , useState} from 'react'
+import { TemaContext } from '../../TemaContext'
 
-function FormularioAutoenfocado() {
+function FormularioAutoenfocado(comprobación) {
   const nombreInput = useRef(null)
   const [nombre, setNombre] = useState('')
+
 
 
 
@@ -13,15 +15,19 @@ function FormularioAutoenfocado() {
     } else {
       nombreInput?.current?.style.setProperty('color', 'black')
     }
+
+    if(nombreInput.current?.value=="hola") {
+      comprobación(true)
+    }
   }, [nombreInput, nombre,])
 
-  return (
+
     <form>
       <input type="text" className="form-control"
-             ref={nombreInput} placeholder="Escribe tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+             ref={nombreInput} placeholder="Escribe tu nombre" / value={nombre} onChange={(e) => setNombre(e.target.value)} />
       <button type="submit" className="btn btn-primary mt-2">Enviar</button>
     </form>
-  )
-}
+
+
 
 export default FormularioAutoenfocado
