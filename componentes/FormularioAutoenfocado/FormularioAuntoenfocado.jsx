@@ -21,13 +21,14 @@ function FormularioAutoenfocado(comprobación) {
     }
   }, [nombreInput, nombre,])
 
-
-    <form>
+    return (
+      <form>
       <input type="text" className="form-control"
-             ref={nombreInput} placeholder="Escribe tu nombre" / value={nombre} onChange={(e) => setNombre(e.target.value)} />
+             ref={nombreInput} placeholder="Escribe tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
       <button type="submit" className="btn btn-primary mt-2">Enviar</button>
-    </form>
+      </form>
+    )
 
-
+}
 
 export default FormularioAutoenfocado
